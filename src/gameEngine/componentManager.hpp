@@ -2,6 +2,7 @@
 #define ZIPERZ_COMPONENT_MANAGER_HPP
 
 #include "collision.hpp"
+#include "transform.hpp"
 #include "mesh.hpp"
 
 #include <vector>
@@ -29,6 +30,8 @@ namespace zl
 		template<typename T>
 		std::vector<T>* getComponentArray();
 	protected:
+		zl::transform 			m_transform;
+		
 		std::vector<mesh> 		m_mesh;
 	
 		std::vector<boxCollider> 	m_boxCollider;
