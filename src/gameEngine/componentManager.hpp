@@ -29,7 +29,7 @@ namespace zl
 		template<typename T>
 		std::vector<T>* getComponentArray();
 	protected:
-		std::vector<mesh> 			m_mesh;
+		std::vector<mesh> 		m_mesh;
 	
 		std::vector<boxCollider> 	m_boxCollider;
 		std::vector<boxCollider2D> 	m_boxCollider2D;
