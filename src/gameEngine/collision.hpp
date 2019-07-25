@@ -11,9 +11,8 @@ namespace zl
 		boxCollider() = delete;
 		
 		// # Argumets are half extends of collider
-		boxCollider(float x, float y, float z);
-	
-	private:
+		explicit boxCollider(float x, float y, float z);
+	protected:
 	};
 
 	class boxCollider2d : boxCollider
@@ -21,10 +20,8 @@ namespace zl
 	  public:
 	  	boxCollider2d() = delete;
 		
-		// # Argumets are half extends of collider
-		boxCollider2d(float x, float y) { boxCollider::boxCollider(x, y, 0.0f); }
-	  
-	  private:
+		// # Arguments are half extends of collider
+		explicit boxCollider2d(float x, float y) { boxCollider::boxCollider(x, y, 0.0f); }
 	};
 	
 	class sphereCollider
@@ -32,8 +29,8 @@ namespace zl
 	public:
 		sphereCollider() = delete;
 		
-		sphereCollider(float radius);
-	private:
+		explicit sphereCollider(float radius);
+	protected:
 	};
 }
 
